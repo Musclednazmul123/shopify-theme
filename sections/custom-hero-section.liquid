@@ -1,0 +1,54 @@
+{{ "custom-hero-section.css" | asset_url | stylesheet_tag }}
+
+  <div class="container">
+    <div class="image">
+      <img src="{{ section.settings.hero_Image | image_url }}" />
+   </div>
+    <div class="text">
+      <h1>{{ section.settings.title }}</h1>
+      <p id="para">{{ section.settings.description }}</p>
+      <a href="{{ section.settings.btn_url }}">{{ section.settings.btn_label }}</a>
+    </div>
+  </div>
+
+<!-- <script src="{{ 'custom-hero-section.js' | asset_url }}"></script> -->
+{% schema %}
+  {
+    "name": "Custom Hero Section",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"hero_Image",
+        "label":"Hero Image"
+      },
+      {
+        "type":"text",
+        "id":"title",
+        "default":"Example Title",
+        "label":"Title"        
+      },
+      {
+        "type":"richtext",
+        "id":"description",
+        "default":"<p>Example subtitle here</p>",
+        "label":"Sub Title"
+      },
+      {
+        "type":"text",
+        "id":"btn_label",
+        "default":"Button",
+        "label":"Button heading"
+      },
+      {
+        "type":"url",
+        "id":"btn_url",
+        "label":"Button URL"
+      }
+    ], 
+    "presets":[
+      {
+        "name":"Custom Hero Section"
+      }
+    ]
+  }
+{% endschema %}

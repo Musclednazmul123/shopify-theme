@@ -1,0 +1,33 @@
+.container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border: solid black 1px;
+    padding: 50px;
+  }
+  
+  img{
+    max-width:100%;
+    max-height: max-content;
+  }
+  
+  .image{
+    flex-basis:50%;
+  }
+  
+  .text{
+    font-size:40px;
+    padding-left:20px;
+    text-align: center;
+  }
+#para{
+    font-size: 20px;
+}
+
+#button{
+    padding: 20px;
+    background-color: black;
+    font-size: 28px;
+    color: white;
+    border-radius: 5px;
+}
